@@ -1,39 +1,35 @@
-class UserController{
-    
-    constructor(){
+class UserController {
+    constructor() {
         this.users = [];
     }
-    
-    getUsers(){
+
+    getUsers() {
         return this.users;
     }
 
-    add(user){
+    add(user) {
         this.users.push(user);
     }
 
-    remove(user){
-        this.users = this.users.filter(function(ele){
-            return ele != user; 
+    remove(user) {
+        this.users = this.users.filter(function(ele) {
+            return ele != user;
         });
     }
 
-    findByEmail(email){
+    findByEmail(email) {
         for (let i = 0; i < this.users.length; i++) { 
             if(this.users[i].email === email)
-                return this.users[i] .email;
+                return this.users[i];
         } 
     }
 
-    findById(id){
+    findById(id) {
         for (let i = 0; i < this.users.length; i++) { 
             if(this.users[i].id === id)
                 return this.users[i];
         } 
     }
-
-
 }
-
 
 module.exports = UserController;
