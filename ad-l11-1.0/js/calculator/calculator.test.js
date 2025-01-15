@@ -31,3 +31,9 @@ test('nultiply 3 * 5 equal 15', () => {
 test('multiply -3 * 5 equal -15', () => {
   expect(calculator.multiply(-3, 5)).toBe(-15);
 })
+
+test('divide 50 into 0 equal no se puede', () => {
+  expect(calculator.divide(30, 0)).toBe("no se puede ya que es determinado");
+});
+
+

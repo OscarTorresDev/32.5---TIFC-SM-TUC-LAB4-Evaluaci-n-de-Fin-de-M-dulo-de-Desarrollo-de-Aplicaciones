@@ -1,17 +1,20 @@
 const add = function(a, b) {
-    return a + b;
-}
+  return a + b;
+};
+
 const subtract = function(a, b) {
   return a - b;
-}
+};
 
-function divide(a, b){
+function divide(a, b) {
+  if (b === 0) {
+    return "no se puede ya que es determinado";
+  }
   return a / b;
 }
 
-function multiply(a, b){
+function multiply(a, b) {
   return a * b;
 }
 
-// When you want to use the divide or multiple function, remember to add it to the export here
-module.exports = {add: add, subtract: subtract, divide: divide, multiply:multiply };
+module.exports = { add, subtract, divide, multiply };
